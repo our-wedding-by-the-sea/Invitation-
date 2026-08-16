@@ -1,430 +1,755 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<!html="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> Our Wedding together | Ahmed & Roufida</title>
+<title>Our Wedding | Ahmed & Roufida</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth; width:100%; max-width:100%; overflow-x:hidden}
 
 body{
-font-family:"Cairo",sans-serif;
-background:#fff;
-color:#2b2b2b;
-scroll-behavior:smooth;
+    font-family:"Cairo",sans-serif;
+    background:#fff;
+    color:#2b2b2b;
+    overflow-x:hidden;
+    width:100%;
+    max-width:100%;
 }
 
-/* 🌅 HERO */
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-overflow:hidden;
-
-background:
-linear-gradient(120deg,
-rgba(255,210,170,.55),
-rgba(160,210,220,.35)),
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=80");
-
-background-size:cover;
-background-position:center;
-}
-
-/* clouds */
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:url("https://i.ibb.co/8gZt7Qz/clouds.png");
-background-size:cover;
-opacity:.15;
-animation:move 60s linear infinite;
-mix-blend-mode:screen;
-}
-
-@keyframes move{
-0%{transform:translateX(0);}
-100%{transform:translateX(-300px);}
-}
-
-.hero .small{
-font-size:28px;
-font-family:"Cormorant Garamond",serif;
-color:#fff;
-opacity:.9;
-position:relative;
-z-index:2;
-}
-
-.hero .names{
-font-size:74px;
-font-family:"Cormorant Garamond",serif;
-color:#fff;
-text-shadow:0 10px 35px rgba(0,0,0,.4);
-position:relative;
-z-index:2;
-margin:10px 0;
-}
-
-/* SECTIONS */
 section{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:60px;
+    min-height:88svh;
+    max-width:100%;
+    overflow:hidden;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:55px 20px;
+    position:relative;
 }
 
-/* 📖 VERSE */
+.hero{
+    background:
+      linear-gradient(120deg,rgba(255,210,170,.48),rgba(160,210,220,.30)),
+      url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85");
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      url("https://i.ibb.co/8gZt7Qz/clouds.png");
+    background-size:cover;
+    opacity:.12;
+    animation:cloudMove 60s linear infinite;
+    mix-blend-mode:screen;
+}
+
+@keyframes cloudMove{
+    from{transform:translateX(0)}
+    to{transform:translateX(-300px)}
+}
+
+.hero-content{
+    position:relative;
+    max-width:100%;
+    overflow:hidden;
+    z-index:2;
+    width:100%;
+}
+
+.small{
+    font-family:"Cormorant Garamond",serif;
+    font-size:42px;
+    font-weight:400;
+    color:#fff;
+    margin-bottom:45px;
+    text-shadow:0 4px 20px rgba(0,0,0,.15);
+}
+
+.names{
+    direction:rtl;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:35px;
+    color:#fff;
+    font-family:"Amiri",serif;
+    font-size:92px;
+    line-height:.9;
+    text-shadow:0 8px 30px rgba(0,0,0,.28);
+}
+
+.names .and{
+    direction:ltr;
+    font-family:"Cormorant Garamond",serif;
+    font-size:90px;
+    line-height:.5;
+}
+
+.enter-btn{
+    position:absolute;
+    right:28px;
+    bottom:22px;
+    z-index:10;
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:50px;
+    background:#82d5c8;
+    color:#111;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.enter-btn:hover{transform:translateY(-2px)}
+
 .verse{
-background:
-linear-gradient(120deg,rgba(255,245,235,.95),rgba(220,240,245,.9)),
-url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=80");
-background-size:cover;
-background-position:center;
+    background:
+      linear-gradient(120deg,rgba(255,245,235,.92),rgba(220,240,245,.88)),
+      url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=85");
+    background-size:cover;
+    background-position:center;
 }
 
 .verse-box{
-background:rgba(255,255,255,.75);
-padding:25px;
-border-radius:18px;
-max-width:800px;
-backdrop-filter:blur(6px);
+    width:min(480px,90%);
+    background:rgba(255,255,255,.78);
+    padding:58px 35px;
+    border-radius:28px;
+    backdrop-filter:blur(7px);
+    box-shadow:0 10px 35px rgba(80,100,100,.06);
 }
 
-.verse p{
-font-size:19px;
-line-height:2.2;
+.verse-text{
+    font-family:"Amiri",serif;
+    font-size:26px;
+    line-height:2.05;
+    font-weight:400;
 }
 
-/* 💍 DETAILS */
+.invite-text{
+    margin-top:45px;
+    color:#6b957a;
+    font-family:"Cairo",sans-serif;
+    font-size:24px;
+    line-height:2;
+    font-weight:400;
+}
+
 .details{
-background:#f3efe8;
+    background:#f4eee5;
 }
+
+.details-inner{width:min(850px,100%)}
 
 .title{
-font-size:42px;
-font-family:"Cormorant Garamond",serif;
-color:#6b8f71;
-margin-bottom:20px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:66px;
+    font-weight:500;
+    color:#6b957a;
+    margin-bottom:48px;
+    direction:ltr;
 }
 
 .cards{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-max-width:850px;
-width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:26px;
+    max-width:700px;
+    margin:auto;
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,.05);
+    min-height:175px;
+    background:rgba(255,255,255,.96);
+    padding:28px 18px;
+    border-radius:26px;
+    box-shadow:0 10px 25px rgba(70,60,45,.07);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    line-height:2;
+    font-weight:300;
 }
 
-/* 📍 LOCATION */
+.card.location-card{
+    direction:ltr;
+}
+
 .location{
-background:#fff;
+    background:#fff;
+}
+
+.location-inner{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .map-btn{
-display:inline-block;
-padding:12px 25px;
-border-radius:40px;
-background:linear-gradient(135deg,#9ad1c6,#e7d4aa);
-text-decoration:none;
-color:#111;
-font-weight:600;
+    display:inline-block;
+    padding:15px 42px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#86d7ca,#ead6a8);
+    text-decoration:none;
+    color:#111;
+    font-size:20px;
+    font-weight:600;
+    direction:ltr;
+    box-shadow:0 7px 18px rgba(100,100,80,.08);
+    transition:.25s;
 }
 
-/* ⏳ COUNTDOWN */
+.map-btn:hover{transform:translateY(-2px)}
+
 .countdown{
-background:
-linear-gradient(120deg,rgba(10,40,60,.35),rgba(255,255,255,.2)),
-url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=80");
-background-size:cover;
-background-position:center;
+    background:
+      linear-gradient(120deg,rgba(180,200,210,.20),rgba(20,50,65,.32)),
+      url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=85");
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.countdown .title{
+    color:#6b957a;
+    text-shadow:0 2px 12px rgba(255,255,255,.35);
 }
 
 .counter{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-max-width:650px;
-margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    width:min(650px,100%);
+    margin:auto;
+    direction:ltr;
 }
 
 .box{
-background:rgba(255,255,255,.25);
-backdrop-filter:blur(8px);
-padding:12px;
-border-radius:12px;
+    background:rgba(255,255,255,.32);
+    backdrop-filter:blur(8px);
+    padding:28px 10px;
+    border-radius:22px;
 }
 
 .num{
-font-size:26px;
-font-weight:bold;
-color:#e7d4aa;
+    display:block;
+    font-size:40px;
+    font-weight:700;
+    color:#f0d99f;
+    line-height:1;
+    margin-bottom:25px;
 }
 
-/* 💌 RSVP */
+.label{
+    font-size:20px;
+    font-weight:300;
+}
+
 .rsvp{
-background:
-linear-gradient(120deg,rgba(20,40,60,.55),rgba(10,20,30,.65)),
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=80");
-background-size:cover;
-color:white;
+    background:
+      linear-gradient(120deg,rgba(20,35,48,.58),rgba(10,20,30,.62)),
+      url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85");
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.rsvp-inner{
+    width:min(650px,100%);
+}
+
+.rsvp-title{
+    font-family:"Amiri",serif;
+    font-size:55px;
+    margin-bottom:45px;
+    color:#fff;
 }
 
 .option{
-background:rgba(255,255,255,.12);
-padding:16px;
-margin:10px auto;
-border-radius:12px;
-cursor:pointer;
-max-width:500px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(7px);
+    padding:20px 15px;
+    margin:14px auto;
+    border-radius:18px;
+    cursor:pointer;
+    max-width:520px;
+    font-family:"Amiri",serif;
+    font-size:25px;
+    transition:.2s;
+    border:1px solid rgba(255,255,255,.05);
 }
 
+.option:hover{background:rgba(255,255,255,.22)}
+
 .option.selected{
-border:1px solid #9ad1c6;
-background:rgba(154,209,198,.25);
+    border:1px solid #9ad1c6;
+    background:rgba(154,209,198,.27);
 }
 
 .msg{
-display:none;
-margin-top:10px;
-color:#9ad1c6;
-font-weight:600;
+    display:none;
+    margin-top:18px;
+    color:#9ad1c6;
+    font-weight:600;
+    font-size:17px;
 }
 
-/* 💌 MESSAGE */
 .message{
-background:
-linear-gradient(120deg,rgba(10,30,40,.55),rgba(255,220,190,.3)),
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=80");
-background-size:cover;
-background-position:center;
-color:white;
+    background:
+      linear-gradient(120deg,rgba(10,30,40,.40),rgba(255,220,190,.28)),
+      url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85");
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+}
+
+.message-inner{
+    width:min(600px,100%);
+}
+
+.message-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:62px;
+    color:#6b957a;
+    margin-bottom:45px;
+    direction:ltr;
 }
 
 input,textarea{
-width:80%;
-padding:12px;
-margin:8px;
-border-radius:10px;
-border:none;
-outline:none;
+    display:block;
+    width:min(370px,90%);
+    margin:14px auto;
+    padding:18px 20px;
+    border-radius:17px;
+    border:none;
+    outline:none;
+    font-family:"Cairo",sans-serif;
+    font-size:17px;
+    text-align:right;
+    direction:rtl;
+    background:rgba(255,255,255,.96);
 }
 
-button{
-padding:12px 25px;
-border:none;
-border-radius:30px;
-background:#e7d4aa;
-cursor:pointer;
-font-weight:600;
+textarea{
+    min-height:105px;
+    resize:none;
 }
 
-/* 🎵 BUTTON */
-.wave-btn{
-position:fixed;
-right:20px;
-bottom:20px;
-padding:12px 16px;
-border:none;
-border-radius:50px;
-background:#9ad1c6;
-cursor:pointer;
-z-index:999;
+input::placeholder,textarea::placeholder{
+    color:#777;
 }
 
+.send-btn{
+    margin-top:12px;
+    padding:15px 43px;
+    border:none;
+    border-radius:50px;
+    background:#efd39c;
+    color:#111;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.sent{
+    display:none;
+    margin-top:18px;
+    font-size:17px;
+    color:#fff;
+}
+
+
+/* مكان زر الدخول الثابت في باقي الأقسام */
+.fixed-enter{
+    position:fixed;
+    right:max(16px, env(safe-area-inset-right));
+    bottom:max(14px, env(safe-area-inset-bottom));
+    z-index:998;
+    max-width:calc(100vw - 32px);
+    padding:13px 23px;
+    border-radius:50px;
+    background:#82d5c8;
+    color:#111;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+}
+
+@media(max-width:600px){
+    section{min-height:86svh;padding:42px 18px}
+
+    .small{font-size:36px;margin-bottom:35px}
+
+    .names{font-size:72px;gap:26px}
+    .names .and{font-size:68px}
+
+    .title{font-size:52px;margin-bottom:30px}
+
+    .verse-box{
+        width:88%;
+        padding:42px 26px;
+        border-radius:27px;
+    }
+
+    .verse-text{font-size:22px;line-height:1.9}
+    .invite-text{font-size:20px;line-height:1.85;margin-top:32px}
+
+    .cards{gap:14px}
+    .card{
+        min-height:145px;
+        padding:18px 8px;
+        font-size:17px;
+    }
+
+    .map-btn{font-size:19px;padding:15px 38px}
+
+    .counter{gap:9px}
+    .box{padding:20px 5px;border-radius:17px}
+    .num{font-size:31px}
+    .label{font-size:15px}
+
+    .rsvp-title{font-size:46px}
+    .option{font-size:21px;padding:16px 10px;margin:11px auto}
+
+    .message-title{font-size:50px}
+    .fixed-enter{
+        right:16px;
+        bottom:14px;
+        font-size:15px;
+        padding:12px 21px;
+    }
+}
+
+@media(max-width:390px){
+    .names{font-size:70px}
+    .names .and{font-size:68px}
+    .card{font-size:17px}
+    .num{font-size:29px}
+    .label{font-size:15px}
+}
 </style>
 </head>
 
 <body>
 
-<!-- 🌅 HERO -->
-<section class="hero">
-<div>
-<div class="small">Our Wedding</div>
-<div class="names">أحمد & رُفيدة</div>
-</div>
-</section>
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="small">Our Wedding</div>
 
-<!-- 📖 VERSE -->
-<section class="verse">
-<div class="verse-box">
-
-<p>
-بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم<br><br>
-
-مِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا<br>
-لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَة
-</p>
-
-<br>
-
-<p style="color:#6b8f71;font-weight:600;">
-بكل الحب والمودة نحتفل ببداية حكايتنا الأجمل، وندعوكم لمشاركتنا فرحتنا.
-</p>
-
-</div>
-</section>
-
-<!-- 💍 DETAILS -->
-<section class="details">
-
-<div>
-<div class="title">تفاصيل الحفل</div>
-
-<div class="cards">
-<div class="card">📅 5 سبتمبر 2026</div>
-<div class="card">⏰ 8:00 PM - 12:00 AM</div>
-<div class="card">🌊 Sea Garden</div>
-<div class="card">👗 Ladies: Olive Green<br>🤵 Gentlemen: Black Suit</div>
-</div>
-
-</div>
-</section>
-
-<!-- 📍 LOCATION -->
-<section class="location">
-<div>
-
-<div class="title">Location</div>
-
-<a class="map-btn" href="https://maps.app.goo.gl/e3oWaZwTmCWPLuN2A?g_st=ac" target="_blank">
-Open Map 📍
-</a>
-
-</div>
-</section>
-
-<!-- ⏳ COUNTDOWN -->
-<section class="countdown">
-
-<div>
-
-<div class="title">Countdown</div>
-
-<div class="counter">
-
-<div class="box"><div class="num" id="d">00</div><div>Days</div></div>
-<div class="box"><div class="num" id="h">00</div><div>Hours</div></div>
-<div class="box"><div class="num" id="m">00</div><div>Min</div></div>
-<div class="box"><div class="num" id="s">00</div><div>Sec</div></div>
-
-</div>
-
-</div>
+        <div class="names">
+            <span>أحمد</span>
+            <span class="and">&amp;</span>
+            <span>رُفيدة</span>
+        </div>
+    </div>
 
 </section>
 
-<!-- 💌 RSVP -->
-<section class="rsvp">
 
-<div>
+<!-- =========================
+     VERSE
+========================= -->
+<section class="verse" id="verse">
+    <div class="verse-box">
 
-<div class="title" style="color:white;">تأكيد الحضور 💌</div>
+        <p class="verse-text">
+            بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم<br><br>
 
-<div class="option" onclick="select(this)">💍 تشريف بالحضور</div>
-<div class="option" onclick="select(this)">🎉 هكون موجود/ة</div>
-<div class="option" onclick="select(this)">✨ حاضر بكل سعادة</div>
-<div class="option" onclick="select(this)">❤️ أتشرف أكون معاكم</div>
+            مِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا<br>
+            لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ<br>
+            مَوَدَّةً وَرَحْمَة
+        </p>
 
-<div class="msg" id="msg">We’re waiting you 💚</div>
+        <p class="invite-text">
+            بكل الحب والمودة نحتفل<br>
+            ببداية حكايتنا الأجمل،<br>
+            وندعوكم لمشاركتنا فرحتنا.
+        </p>
 
-</div>
-
+    </div>
 </section>
 
-<!-- 💌 MESSAGE -->
-<section class="message">
 
-<div>
+<!-- =========================
+     DETAILS
+========================= -->
+<section class="details" id="details">
+    <div class="details-inner">
 
-<div class="title">Leave a Message</div>
+        <div class="title">تفاصيل الحفل</div>
 
-<input id="name" placeholder="Name">
-<br>
-<textarea id="msgBox" placeholder="Your wish..."></textarea>
-<br>
-<button onclick="saveMsg()">Send</button>
+        <div class="cards">
 
-<p id="done" style="display:none;color:#9ad1c6;">Saved 💚</p>
+            <div class="card">
+                📅 5 سبتمبر<br>
+                2026
+            </div>
 
-</div>
+            <div class="card">
+                ⏰ 8:00 PM<br>
+                - 12:00 AM
+            </div>
 
+            <div class="card location-card">
+                🌊 Sea garden hall<br>
+                6 October club_Al anfoushy
+            </div>
+
+            <div class="card">
+                👗 Ladies: 👗<br>
+                Olive Green<br><br>
+                🤵 Gentlemen:<br>
+                Black Suit
+            </div>
+
+        </div>
+    </div>
 </section>
 
-<!-- 🌊 SOUND -->
-<button class="wave-btn" onclick="toggleWave()">🤍 ادخلي عمري</button>
 
-<audio id="wave" loop>
-<source src="song.mp3" type="audio/mpeg">
-</audio>
+<!-- =========================
+     LOCATION
+========================= -->
+<section class="location" id="location">
+    <div class="location-inner">
+
+        <div class="title">Location</div>
+
+        <a
+            class="map-btn"
+            href="https://maps.app.goo.gl/3gGDyVjYzqEr7HA6A"
+            target="_blank"
+            rel="noopener noreferrer">
+            📍 Open Map
+        </a>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+<section class="countdown" id="countdown">
+    <div>
+        <div class="title">Countdown</div>
+
+        <div class="counter">
+
+            <div class="box">
+                <span class="num" id="days">00</span>
+                <span class="label">Days</span>
+            </div>
+
+            <div class="box">
+                <span class="num" id="hours">00</span>
+                <span class="label">Hours</span>
+            </div>
+
+            <div class="box">
+                <span class="num" id="minutes">00</span>
+                <span class="label">Min</span>
+            </div>
+
+            <div class="box">
+                <span class="num" id="seconds">00</span>
+                <span class="label">Sec</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================
+     RSVP
+========================= -->
+<section class="rsvp" id="rsvp">
+    <div class="rsvp-inner">
+
+        <div class="rsvp-title">تأكيد الحضور 💌</div>
+
+        <div class="option" onclick="selectOption(this)">
+            💍 شرف بالحضور
+        </div>
+
+        <div class="option" onclick="selectOption(this)">
+            🎉 حكون موجود/ة
+        </div>
+
+        <div class="option" onclick="selectOption(this)">
+            ✨ حاضر بكل سعادة
+        </div>
+
+        <div class="option" onclick="selectOption(this)">
+            ❤️ أشرف أكون معاكم
+        </div>
+
+        <div class="msg" id="rsvpMsg">تم اختيار ردّك ❤️</div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+<section class="message" id="message">
+    <div class="message-inner">
+
+        <div class="message-title">Leave a Message</div>
+
+        <form onsubmit="sendMessage(event)">
+            <input id="guestName" type="text" placeholder="Name" required>
+
+            <textarea id="guestWish" placeholder="...Your wish" required></textarea>
+
+            <button class="send-btn" type="submit">Send</button>
+        </form>
+
+        <div class="sent" id="sentMessage">
+            Thank you for your lovely message 🤍
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<a class="fixed-enter" id="nextBtn"
+href="#verse" onclick="startWedding(event)">ادخلي عمري 🤍</a
+                                                    >
 
 <script>
+/* =========================
+   MUSIC،
+========================= */
 
-/* RSVP */
-function select(el){
-document.querySelectorAll(".option").forEach(o=>o.classList.remove("selected"));
-el.classList.add("selected");
-document.getElementById("msg").style.display="block";
+function startWedding(event){
+    event.preventDefault();
+
+    const music = document.getElementById("music");
+
+    if (music) {
+        music.play().catch(function(error){
+            console.log("Music playback:", error);
+        });
+    }
+
+    const verse = document.getElementById("verse");
+    if (verse) {
+        verse.scrollIntoView({behavior:"smooth"});
+    }
 }
 
-/* COUNTDOWN */
-let eventDate=new Date("2026-09-05T20:00:00").getTime();
+/* =========================
+   COUNTDOWN
+   التاريخ: 5 سبتمبر 2026 - 8:00 PM
+========================= */
 
-setInterval(()=>{
-let now=new Date().getTime();
-let diff=eventDate-now;
+const weddingDate = new Date("September 5, 2026 20:00:00").getTime();
 
-document.getElementById("d").innerText=Math.floor(diff/86400000);
-document.getElementById("h").innerText=Math.floor((diff%86400000)/3600000);
-document.getElementById("m").innerText=Math.floor((diff%3600000)/60000);
-document.getElementById("s").innerText=Math.floor((diff%60000)/1000);
+function updateCountdown(){
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-},1000);
+    if(distance <= 0){
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        return;
+    }
 
-/* SAVE MESSAGE */
-function saveMsg(){
-let name=document.getElementById("name").value;
-let msg=document.getElementById("msgBox").value;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
 
-if(msg.trim()==="") return;
-
-let arr=JSON.parse(localStorage.getItem("msgs")||"[]");
-arr.push({name,msg});
-localStorage.setItem("msgs",JSON.stringify(arr));
-
-document.getElementById("done").style.display="block";
+    document.getElementById("days").textContent = String(days).padStart(2,"0");
+    document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
 }
 
-/* WAVES */
-let wave=document.getElementById("wave");
+updateCountdown();
+setInterval(updateCountdown,1000);
 
-function toggleWave(){
-if(wave.paused){
-wave.play();
-}else{
-wave.pause();
+
+/* =========================
+   RSVP
+========================= */
+
+function selectOption(element){
+    document.querySelectorAll(".option").forEach(function(item){
+        item.classList.remove("selected");
+    });
+
+    element.classList.add("selected");
+    document.getElementById("rsvpMsg").style.display = "block";
 }
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+function sendMessage(event){
+    event.preventDefault();
+
+    document.getElementById("sentMessage").style.display = "block";
+    event.target.reset();
 }
+
+
+/* =========================
+   زر الدخول الواحد
+========================= */
+const sections = Array.from(document.querySelectorAll("body > section"));
+const nextBtn = document.getElementById("nextBtn");
+
+function updateNextButton(){
+    const scrollPoint = window.scrollY + window.innerHeight * 0.45;
+    let currentIndex = 0;
+
+    sections.forEach((section, index) => {
+        if(scrollPoint >= section.offsetTop){
+            currentIndex = index;
+        }
+    });
+
+    const nextSection = sections[currentIndex + 1];
+    if(nextSection){
+        nextBtn.href = "#" + nextSection.id;
+        nextBtn.style.display = "inline-block";
+    }else{
+        nextBtn.style.display = "none";
+    }
+}
+
+window.addEventListener("scroll", updateNextButton, {passive:true});
+window.addEventListener("resize", updateNextButton);
+updateNextButton();
 
 </script>
 
