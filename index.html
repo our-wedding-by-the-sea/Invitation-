@@ -638,21 +638,23 @@ input::placeholder,textarea::placeholder{
 
 <a class="fixed-enter" id="nextBtn"
 href="#verse" onclick="startWedding(event)">ادخلي عمري 🤍</a
-                                                    >
+                                                    ><audio id="music" loop preload="auto">
+    <source src="./song.mp3" type="audio/mpeg">
+                                                    </audio>
 
 <script>
 /* =========================
-   MUSIC،
+   ،
 ========================= */
 
 function startWedding(event){
     event.preventDefault();
 
-    const music = document.getElementById("music");
+    const  = document.getElementById("");
 
-    if (music) {
-        music.play().catch(function(error){
-            console.log("Music playback:", error);
+    if () {
+        .play().catch(function(error){
+            console.log(" playback:", error);
         });
     }
 
